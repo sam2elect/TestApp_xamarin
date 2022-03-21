@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.my_policies"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False" BackgroundColor="#EFF1F5"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="20,0,20,0" BackgroundColor="#EFF1F5" RowSpacing="25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <ImageButton  x:Name="back_btn" Clicked="back_btn_Clicked"  Grid.Row="0" HorizontalOptions="Start" Source="back_btn.png"/>
+
+                <Image Grid.Row="0" Source="two_burger_menu.png" HorizontalOptions="End"/>
+
+                <Label Grid.Row="1" Text="My Policies" FontFamily="RobotoRegular" FontAttributes="Bold" FontSize="30" TextColor="#555555" Margin="20,0,0,0" />
+
+                <xct:Expander IsExpanded="False" x:Name="Policy_Expander" Tapped="Policy_Expander_Tapped"
+                      Grid.Row="2" CollapseAnimationLength="400">
+                    <xct:Expander.Header>
+                        <Frame Grid.Row="2" HasShadow="True" BackgroundColor="#eff1f5"  CornerRadius="18" Padding="20" Margin="10,0,10,0" HeightRequest="20">
+
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="active_policy.png" HeightRequest="50" HorizontalOptions="Start" Margin="0,-5,0,-5" />
+                                <Label Text="Active Policy" FontSize="16" FontAttributes="Bold" FontFamily="RobotoMedium" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" TextColor="#555555"/>
+                                <Image Source="down.png" x:Name="policydown"  HorizontalOptions="EndAndExpand" Margin="0,-5,0,-5" />
+                            </StackLayout>
+                        </Frame>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#eff1f5">
+                                <Label Text="View Policy List" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                <Label Text="Download Policy schedule" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                <Label Text="View premium receipt" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                                <Label Text="View product benefits" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="4">
+                                <Label Text="Surrendering Policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                                <Label Text="Mail me policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+
+                <xct:Expander IsExpanded="False" x:Name="Policy_Changes_Expander" Tapped="Policy_Changes_Expander_Tapped"
+                      Grid.Row="3" CollapseAnimationLength="400">
+                    <xct:Expander.Header>
+                        <Frame Grid.Row="3" HasShadow="True" BackgroundColor="#eff1f5"  CornerRadius="18" Padding="20" Margin="10,0,10,0" HeightRequest="20">
+
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="policy_changes.png" HeightRequest="50" HorizontalOptions="Start" Margin="0,-5,0,-5" />
+                                <Label Text="Policy Changes" FontSize="16" FontAttributes="Bold" FontFamily="RobotoMedium" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" TextColor="#555555"/>
+                                <Image Source="down.png" x:Name="policychanges"  HorizontalOptions="EndAndExpand" Margin="0,-5,0,-5" />
+                            </StackLayout>
+                        </Frame>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#eff1f5">
+                                <Label Text="View Policy List" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                <Label Text="Download Policy schedule" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                <Label Text="View premium receipt" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                                <Label Text="View product benefits" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                                <Label Text="Surrendering Policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                                <Label Text="Mail me policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+
+                <xct:Expander IsExpanded="False" x:Name="Lapsed_Expander" Tapped="Lapsed_Expander_Tapped"
+                      Grid.Row="4" CollapseAnimationLength="400">
+                    <xct:Expander.Header>
+                        <Frame Grid.Row="4" HasShadow="True" BackgroundColor="#eff1f5"  CornerRadius="18" Padding="20" Margin="10,0,10,0" HeightRequest="20">
+
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="lapsed_policy.png" HeightRequest="50" HorizontalOptions="Start" Margin="0,-5,0,-5" />
+                                <Label Text="Lapsed Policy" FontSize="16" FontAttributes="Bold" FontFamily="RobotoMedium" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" TextColor="#555555"/>
+                                <Image Source="down.png" x:Name="Lapsed"  HorizontalOptions="EndAndExpand" Margin="0,-5,0,-5" />
+                            </StackLayout>
+                        </Frame>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#eff1f5">
+                                <Label Text="View Policy List" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                <Label Text="Download Policy schedule" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                <Label Text="View premium receipt" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                                <Label Text="View product benefits" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                                <Label Text="Surrendering Policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                                <Label Text="Mail me policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+
+                <xct:Expander IsExpanded="False" x:Name="Payments_Expander" Tapped="Payments_Expander_Tapped"
+                      Grid.Row="5" CollapseAnimationLength="400">
+                    <xct:Expander.Header>
+                        <Frame Grid.Row="5" HasShadow="True" BackgroundColor="#eff1f5"  CornerRadius="18" Padding="20" Margin="10,0,10,0" HeightRequest="20">
+
+                            <StackLayout Orientation="Horizontal" >
+                                <Image Source="payments.png" HeightRequest="50" HorizontalOptions="Start" Margin="0,-5,0,-5" />
+                                <Label Text="Payments" FontSize="16" FontAttributes="Bold" FontFamily="RobotoMedium" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" TextColor="#555555"/>
+                                <Image Source="down.png" x:Name="payments"  HorizontalOptions="EndAndExpand" Margin="0,-5,0,-5" />
+                            </StackLayout>
+                        </Frame>
+                    </xct:Expander.Header>
+                    <xct:Expander.Content>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="#eff1f5">
+                                <Label Text="View Policy List" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                <Label Text="Download Policy schedule" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                <Label Text="View premium receipt" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                                <Label Text="View product benefits" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                                <Label Text="Surrendering Policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                                <Label Text="Mail me policy" TextColor="#555555" FontSize="16" FontFamily="Robotolight" HorizontalOptions="Start"/>
+                                <ImageButton Source="right.png" WidthRequest="20" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Grid>
+                    </xct:Expander.Content>
+                </xct:Expander>
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
